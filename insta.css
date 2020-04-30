@@ -1,0 +1,11 @@
+*{
+	margin: 0;
+	padding:0;
+	border:0;
+}
+img {
+  border-radius: 8px;
+}
+.card-body{
+	display:none; 
+}

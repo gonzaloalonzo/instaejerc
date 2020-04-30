@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Instagram Test</title>
+	<link rel="stylesheet" type="text/css" href="insta.css">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+		<script src="https://kit.fontawesome.com/ff5704e811.js" crossorigin="anonymous"></script>
+		 <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script>
+					$(document).ready(function(){
+			    // Set div display to none
+			    $(".inline-btn").click(function(){
+			        $(".card-columns").css("display", "inline");
+			        $(".card-body").css("display","unset");
+			    });
+			    
+			    // Set div display to block
+			    $(".block-btn").click(function(){
+			        $(".card-columns").css("display", "block");
+			        $(".card-body").css("display","none");
+			    });
+			});
+		</script>
+</head>
+<header>
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		<a class="navbar-brand" href="#"><span style="color: blue;"><i class="fab fa-instagram"></i></span>Instagram</a>
+				
+
+
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+			</button>
+
+
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav mr-auto"></ul>
+
+				<form class="form-inline my-2 my-sm-0">
+					<button type="button" class="btn btn-outline-dark bg-success" data-toggle="modal" data-target="#exampleModal">Create a new post</button>
+				</form>
+			
+
+				<div></div>
+				
+				<div class="dropdown">
+					
+					<button class="btn dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						<i class="fas fa-cog"></i>
+					</button>
+					
+					<div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+						<button class="dropdown-item" type="button">Action</button>
+						<button class="dropdown-item" type="button">Another action</button>
+						<button class="dropdown-item" type="button">Something else here</button>
+					</div>
+
+				</div>
+
+			
+		</div>
+	</nav>
+
+</header>
+	
+		<div class="small-4 medium-4 large-4 colunm text-center">
+    		
+    		<button type = "button" class="block-btn">
+    		<i class="fas fa-th"></i>
+
+    		</button>
+    		 
+    		<button  type ="button" class="inline-btn" >
+			<i class="fas fa-stop-circle"></i>
+			</button>
+    		
+		</div>
+		
+	
+<body>
+
+	<div class="container">
+
+		<div class="card-columns" id="galeria">
+  		</div>
+  	</div>	
+		<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  			<div class="modal-dialog modal-dialog-centered" role="document">
+    			<div class="modal-content">
+     		 		<div class="modal-header">
+        					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          						<span aria-hidden="true">&times;</span>
+        					</button>
+      				</div>
+      					<div class="modal-body">
+        ...           
+      			</div>
+
+      			 <div class="modal-footer">
+      			 	<div class="container">
+      			 	<i class="fas fa-camera "></i>
+      			 	<i class="fas fa-map-marker-alt text-left"></i>
+      			 	</div>
+						<!--<div class="container">
+							<div class="row">
+								<div class="col-sm-6">
+      							<i class="fas fa-camera "></i>
+      							</div>
+      							<div class="col-sm-6" >
+      							<i class="fas fa-map-marker-alt text-left"></i>
+      							</div>
+      						</div>
+        				</div>-->
+        						<button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+        						<button type="button" class="btn btn-primary bg-success">Publish</button>
+      					
+
+    			</div>
+  			</div>
+		</div>
+
+
+		<script type="text/javascript">
+		var imagenes =[1,2,3,4,5,6,7,8,9,10,11,12];
+		var galeria = document.getElementById('galeria');
+		for(imagen of imagenes){
+			galeria.innerHTML +=`
+			<div class="card">
+    			<img src="image/${imagen}.jpg" class="card-img-top" alt="...">
+    				<div class="card-body">
+      					<h5 class="card-title">Card title that wraps to a new line</h5>
+      						<p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+    				</div>
+  			</div>`
+		}
+		</script>
+		
+
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
